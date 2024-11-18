@@ -10,10 +10,17 @@ plugins:
   - name: tap-csv
     variant: meltanolabs
     pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+  - name: tap-github
+    variant: matatika
+    pip_url: git+https://github.com/MeltanoLabs/tap-github.git
   loaders:
   - name: target-postgres
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.2.0
+  transforms:
+  - name: dbt-github
+    variant: matatika
+    pip_url: https://github.com/Matatika/dbt-tap-github@v0.2.0
   transformers:
   - name: dbt
     variant: dbt-labs
@@ -22,6 +29,9 @@ plugins:
   - name: files-dbt
     variant: matatika
     pip_url: git+https://github.com/Matatika/files-dbt@v1.0.x.2
+  - name: analyze-github
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/analyze-github@v0.3.0
   utilities:
   - name: matatika
     variant: matatika
